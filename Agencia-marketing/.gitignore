@@ -261,6 +261,8 @@ logs
 
 node_modules
 bower_components
+build
+static
 
 *.sublime*
 
