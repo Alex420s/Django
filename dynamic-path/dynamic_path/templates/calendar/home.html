@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
+</head>
+<body class="bg-slate-300 dark:bg-zinc-400">
+ 
+    <section class="flex flex-col items-center h-screen" >
+        <h2 class="text-4xl font-bold my-3  py-4">Selecciona el mes</h2>
+        <ul class="grid grid-cols-4 grid-rows-3 gap-8 mt-10  h-1/2">
+
+        {% for month in months %}
+             
+            <!-- <li ><a href="2023/{{ month |title }}" class="  text-3xl  m-5 py-2 bg-slate-500 ">{{ month |title }} </a></li> -->
+            <li ><a href="{% url 'str-cal' 2023 month|title %}" class="dark:bg-green-800 text-cyan-200 px-5 py-2.5 flex-1">{{month | title}}</a></li>
+            
+        {% endfor %}
+
+        </ul></div>
+    </section>
+    
+</body>
+</html>
+
